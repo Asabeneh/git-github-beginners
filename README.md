@@ -11,4 +11,8 @@ git add remote origin url_of_remote_repo
 git push -u origin master  
 git branch new-branch
 git checkout new-branch  
-git push -u origin new-branch  
+git push -u origin new-branch
+
+## Demo
+
+[live](https://github.com/Asabeneh/xyz-repo)
