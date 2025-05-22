@@ -15,4 +15,4 @@ git push -u origin new-branch
 
 ## Demo
 
-[live](https://github.com/Asabeneh/xyz-repo)
+[live](hhttps://github.com/Asabeneh/git-github-beginners)
