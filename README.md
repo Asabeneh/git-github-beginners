@@ -1,11 +1,6 @@
-# Git and GitHub: A Comprehensive Guide for Beginners and Advanced Users
 
-This guide provides a thorough introduction to Git and GitHub, covering essential commands, workflows, and advanced techniques. Whether you're new to version control or seeking to master complex Git operations, this document serves as a complete reference. All commands are designed for use in a terminal.
-
-## Table of Contents
 
 - [Git and GitHub: A Comprehensive Guide for Beginners and Advanced Users](#git-and-github-a-comprehensive-guide-for-beginners-and-advanced-users)
-  - [Table of Contents](#table-of-contents)
   - [Introduction to Git and GitHub](#introduction-to-git-and-github)
   - [Getting Started with Git](#getting-started-with-git)
     - [Installation and Setup](#installation-and-setup)
@@ -32,6 +27,8 @@ This guide provides a thorough introduction to Git and GitHub, covering essentia
   - [Best Practices and Tips](#best-practices-and-tips)
   - [Resources and Further Reading](#resources-and-further-reading)
 
+# Git and GitHub: A Comprehensive Guide for Beginners and Advanced Users 
+This guide provides a thorough introduction to Git and GitHub, covering essential commands, workflows, and advanced techniques. Whether you're new to version control or seeking to master complex Git operations, this document serves as a complete reference. All commands are designed for use in a terminal.
 ## Introduction to Git and GitHub
 
 **Git** is a distributed version control system that tracks changes to files, enabling multiple users to collaborate on projects efficiently. It records project history, allows branching for experimentation, and supports merging changes seamlessly.
