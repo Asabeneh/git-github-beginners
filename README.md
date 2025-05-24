@@ -436,7 +436,8 @@ Merge conflicts occur when Git cannot automatically reconcile changes from two b
   - Example:  
 
 - **`git add  file1 file2 file3`**
--It is possible to add multiple or several files  
+-It is possible to add multiple or several files 
+
     ```bash
     git add README.md
     ```
