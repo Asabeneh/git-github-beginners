@@ -1,5 +1,4 @@
 
-
 - [Git and GitHub: A Comprehensive Guide for Beginners and Advanced Users](#git-and-github-a-comprehensive-guide-for-beginners-and-advanced-users)
   - [Introduction to Git and GitHub](#introduction-to-git-and-github)
   - [Getting Started with Git](#getting-started-with-git)
@@ -26,9 +25,12 @@
     - [Resolving Merge Conflicts](#resolving-merge-conflicts)
   - [Best Practices and Tips](#best-practices-and-tips)
   - [Resources and Further Reading](#resources-and-further-reading)
+  - [Key Git Commands](#key-git-commands)
 
-# Git and GitHub: A Comprehensive Guide for Beginners and Advanced Users 
+# Git and GitHub: A Comprehensive Guide for Beginners and Advanced Users
+
 This guide provides a thorough introduction to Git and GitHub, covering essential commands, workflows, and advanced techniques. Whether you're new to version control or seeking to master complex Git operations, this document serves as a complete reference. All commands are designed for use in a terminal.
+
 ## Introduction to Git and GitHub
 
 **Git** is a distributed version control system that tracks changes to files, enabling multiple users to collaborate on projects efficiently. It records project history, allows branching for experimentation, and supports merging changes seamlessly.
@@ -419,4 +421,116 @@ Merge conflicts occur when Git cannot automatically reconcile changes from two b
 - [Interactive Git Tutorial](https://learngitbranching.js.org)
 - [Demo Repository](https://github.com/Asabeneh/git-github-beginners)
 
+## Key Git Commands
 
+- **`git init`**  
+  - Initializes a new Git repository in the current directory, creating a `.git` folder for version history.  
+  - Example:  
+
+    ```bash
+    git init
+    ```
+
+- **`git add <filename>`**  
+  - Stages a specific file for the next commit, preparing it for inclusion in the repository.  
+  - Example:  
+
+    ```bash
+    git add README.md
+    ```
+
+- **`git add .`**  
+  - Stages all modified and new files in the current directory for the next commit.  
+  - Example:  
+
+    ```bash
+    git add .
+    ```
+
+- **`git commit -m "commit message"`**  
+  - Commits staged changes with a descriptive message to document the changes.  
+  - Example:  
+
+    ```bash
+    git commit -m "Add initial project files"
+    ```
+
+- **`git remote add origin <github-url>`**  
+  - Links the local repository to a remote GitHub repository using the provided URL.  
+  - Example:  
+
+    ```bash
+    git remote add origin https://github.com/username/my-project.git
+    ```
+
+- **`git push -u origin main`**  
+  - Pushes the local `main` branch to the remote repository and sets it as the upstream branch.  
+  - Example:  
+
+    ```bash
+    git push -u origin main
+    ```
+
+- **`git pull`**  
+  - Fetches and merges changes from the remote repository into the current branch.  
+  - Example:  
+
+    ```bash
+    git pull
+    ```
+
+- **`git branch`**  
+  - Lists all local branches, with the current branch marked by an asterisk.  
+  - Example:  
+
+    ```bash
+    git branch
+    ```
+
+- **`git branch -a`**  
+  - Lists all branches, including local and remote branches.  
+  - Example:  
+
+    ```bash
+    git branch -a
+    ```
+
+- **`git branch <branch-name>`**  
+  - Creates a new branch for developing features or fixes.  
+  - Example:  
+
+    ```bash
+    git branch feature-branch
+    ```
+
+- **`git checkout <branch-name>`**  
+  - Switches to the specified branch to work on its changes.  
+  - Example:  
+
+    ```bash
+    git checkout feature-branch
+    ```
+
+- **`git branch -d <branch-name>`**  
+  - Deletes a local branch if it has been fully merged.  
+  - Example:  
+
+    ```bash
+    git branch -d feature-branch
+    ```
+
+- **`git push -d origin <branch-name>`**  
+  - Deletes a remote branch on GitHub.  
+  - Example:  
+
+    ```bash
+    git push -d origin feature-branch
+    ```
+
+- **`git merge <branch-name>`**  
+  - Merges the specified branch into the current branch, combining their changes.  
+  - Example:  
+
+    ```bash
+    git merge feature-branch
+    ```
