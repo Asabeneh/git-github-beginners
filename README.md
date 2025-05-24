@@ -1,12 +1,11 @@
 # Git and GitHub for Beginners
 
-## Git
-
-# Git Refresher Guide
+## Git Introduction
 
 This guide covers essential Git commands for managing your project, from initialization to collaboration, history management, and more. All commands are formatted for use in a terminal.
 
 ## Initialize and Check Status
+
 - `git init`  
   Initializes a new Git repository in the current directory, creating a `.git` folder.
 - `git status`  
@@ -17,6 +16,7 @@ This guide covers essential Git commands for managing your project, from initial
   Shows a compact, one-line summary of the commit history.
 
 ## Staging and Committing Changes
+
 - `git add <filename>`  
   Adds a specific file to the staging area for the next commit.
 - `git add .`  
@@ -27,12 +27,14 @@ This guide covers essential Git commands for managing your project, from initial
   Modifies the most recent commit, allowing changes to the commit message or staged files.
 
 ## Viewing Differences
+
 - `git diff`  
   Shows changes between the working directory and the staging area.
 - `git diff --staged`  
   Displays changes in the staging area compared to the last commit.
 
 ## Remote Repository
+
 - `git remote add origin <url_of_remote_repo>`  
   Links the local repository to a remote repository (e.g., GitHub, GitLab).
 - `git push -u origin <branch>`  
@@ -47,6 +49,7 @@ This guide covers essential Git commands for managing your project, from initial
   Lists all remote repositories and their URLs.
 
 ## Branching
+
 - `git branch <new-branch>`  
   Creates a new branch named `<new-branch>`.
 - `git checkout <new-branch>`  
@@ -61,6 +64,7 @@ This guide covers essential Git commands for managing your project, from initial
   Deletes the specified branch (if fully merged).
 
 ## Undoing Changes
+
 - `git reset <filename>`  
   Unstages a file from the staging area but preserves changes in the working directory.
 - `git checkout -- <filename>`  
@@ -71,6 +75,7 @@ This guide covers essential Git commands for managing your project, from initial
   Resets the working directory and index to a specified commit, discarding all changes.
 
 ## Stashing Changes
+
 - `git stash`  
   Temporarily saves uncommitted changes, allowing you to switch branches.
 - `git stash pop`  
@@ -79,6 +84,7 @@ This guide covers essential Git commands for managing your project, from initial
   Lists all stashed changesets.
 
 ## Tagging
+
 - `git tag <tagname>`  
   Creates a lightweight tag at the current commit.
 - `git tag -a <tagname> -m "tag message"`  
@@ -87,13 +93,13 @@ This guide covers essential Git commands for managing your project, from initial
   Pushes a specific tag to the remote repository.
 
 ## Tips
+
 - Always use clear, descriptive commit messages to document changes.
 - Run `git status` frequently to understand the state of your repository.
 - Use `git diff` to review changes before staging or committing.
 - Be cautious with commands like `git reset --hard`, as they can permanently discard changes.
 
 This guide is a quick reference for common Git workflows. For more details, consult the official Git documentation (`git --help` or `man git`).
-
 
 ## Demo
 
