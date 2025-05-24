@@ -537,3 +537,5 @@ Merge conflicts occur when Git cannot automatically reconcile changes from two b
     ```bash
     git merge feature-branch
     ```
+- **`git reset --hard HEAD~1`**
+  - To remove the last git commit
