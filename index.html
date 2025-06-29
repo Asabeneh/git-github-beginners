@@ -184,6 +184,27 @@
             background: linear-gradient(to right, white, var(--bg-color), white);
         }
         
+        .social-links {
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            margin: 0 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+        
+        .social-links a:hover {
+            background-color: var(--accent-color);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(138, 43, 226, 0.3);
+        }
+        
         ul, ol {
             margin-bottom: 1.5rem;
             padding-left: 2rem;
@@ -494,150 +515,15 @@
                     <li><strong>Committed</strong>: The data is safely stored in your local database</li>
                 </ul>
                 
-           <div class="workflow-diagram">
-    <svg width="800" height="400" viewBox="0 0 800 400">
-        <!-- Definitions for reusable elements -->
-        <defs>
-            <!-- Gradient for boxes -->
-            <linearGradient id="boxGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color:#4B0082;stop-opacity:0.8"/>
-                <stop offset="100%" style="stop-color:#8A2BE2;stop-opacity:0.9"/>
-            </linearGradient>
-            
-            <!-- Arrow marker -->
-            <marker id="arrowhead" markerWidth="10" markerHeight="7" 
-                refX="9" refY="3.5" orient="auto">
-                <polygon points="0 0, 10 3.5, 0 7" fill="#8A2BE2"/>
-            </marker>
-        </defs>
-
-        <!-- Working Directory -->
-        <g class="state-box" transform="translate(100,150)">
-            <rect width="180" height="100" rx="10" 
-                fill="url(#boxGradient)" 
-                stroke="#4B0082" 
-                stroke-width="2"/>
-            <text x="90" y="45" 
-                fill="white" 
-                text-anchor="middle" 
-                font-size="16" 
-                font-weight="bold">Working Directory</text>
-            <text x="90" y="70" 
-                fill="white" 
-                text-anchor="middle" 
-                font-size="12">(Modified)</text>
-        </g>
-
-        <!-- Staging Area -->
-        <g class="state-box" transform="translate(310,150)">
-            <rect width="180" height="100" rx="10" 
-                fill="url(#boxGradient)" 
-                stroke="#4B0082" 
-                stroke-width="2"/>
-            <text x="90" y="45" 
-                fill="white" 
-                text-anchor="middle" 
-                font-size="16" 
-                font-weight="bold">Staging Area</text>
-            <text x="90" y="70" 
-                fill="white" 
-                text-anchor="middle" 
-                font-size="12">(Staged)</text>
-        </g>
-
-        <!-- Git Repository -->
-        <g class="state-box" transform="translate(520,150)">
-            <rect width="180" height="100" rx="10" 
-                fill="url(#boxGradient)" 
-                stroke="#4B0082" 
-                stroke-width="2"/>
-            <text x="90" y="45" 
-                fill="white" 
-                text-anchor="middle" 
-                font-size="16" 
-                font-weight="bold">Git Repository</text>
-            <text x="90" y="70" 
-                fill="white" 
-                text-anchor="middle" 
-                font-size="12">(Committed)</text>
-        </g>
-
-        <!-- Arrows -->
-        <!-- Working Directory to Staging Area -->
-        <g class="arrow">
-            <path d="M290,200 L300,200" 
-                stroke="#8A2BE2" 
-                stroke-width="2" 
-                marker-end="url(#arrowhead)"/>
-            <text x="295" y="190" 
-                fill="#4B0082" 
-                text-anchor="middle" 
-                font-size="12">git add</text>
-        </g>
-
-        <!-- Staging Area to Git Repository -->
-        <g class="arrow">
-            <path d="M500,200 L510,200" 
-                stroke="#8A2BE2" 
-                stroke-width="2" 
-                marker-end="url(#arrowhead)"/>
-            <text x="505" y="190" 
-                fill="#4B0082" 
-                text-anchor="middle" 
-                font-size="12">git commit</text>
-        </g>
-
-        <!-- Title -->
-        <text x="400" y="50" 
-            fill="#4B0082" 
-            text-anchor="middle" 
-            font-size="24" 
-            font-weight="bold">Git's Three States</text>
-
-        <!-- Description -->
-        <text x="400" y="350" 
-            fill="#4B0082" 
-            text-anchor="middle" 
-            font-size="14">Files in Git flow through three main states before being saved in the repository</text>
-    </svg>
-</div>
-
-<style>
-.workflow-diagram {
-    width: 100%;
-    max-width: 800px;
-    margin: 2rem auto;
-    background: white;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.workflow-diagram svg {
-    width: 100%;
-    height: auto;
-}
-
-/* Animation for the boxes */
-.state-box {
-    transition: transform 0.3s ease;
-}
-
-.state-box:hover {
-    transform: translate(0, -5px);
-}
-
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-    .workflow-diagram {
-        background: #252525;
-    }
-    
-    .workflow-diagram text[fill="#4B0082"] {
-        fill: #B8B5FF;
-    }
-}
-</style>
+                <div class="workflow-chart">
+                    <h4>Git's Three States Workflow</h4>
+                    <p>Files in Git flow through three main states before being saved in the repository:</p>
+                    <ol>
+                        <li><strong>Working Directory</strong> (Modified): Where you make changes to your files</li>
+                        <li><strong>Staging Area</strong> (Staged): Where you prepare files for the next commit using <code>git add</code></li>
+                        <li><strong>Git Repository</strong> (Committed): Where your changes are permanently stored using <code>git commit</code></li>
+                    </ol>
+                </div>
                 
                 <div class="exercise">
                     <h4>Self-Check Quiz</h4>
@@ -662,8 +548,8 @@
                 <pre><code># Using Homebrew
 $ brew install git
 
-# Or using the installer from git-scm.com
-$ https://git-scm.com/download/mac</code></pre>
+# Or download the installer from git-scm.com
+# Visit: https://git-scm.com/download/mac</code></pre>
                 
                 <h4>On Linux:</h4>
                 <pre><code># Debian/Ubuntu
@@ -839,6 +725,40 @@ node_modules/
 .vscode/
 .idea/</code></pre>
                 
+                <h3>Common Git Commands</h3>
+                <p>Here are some additional commands you'll use frequently:</p>
+                
+                <table class="command-table">
+                    <tr>
+                        <th>Command</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td><code>git pull</code></td>
+                        <td>Fetch and merge changes from the remote repository</td>
+                    </tr>
+                    <tr>
+                        <td><code>git push</code></td>
+                        <td>Upload local commits to the remote repository</td>
+                    </tr>
+                    <tr>
+                        <td><code>git fetch</code></td>
+                        <td>Download objects and refs from remote repository</td>
+                    </tr>
+                    <tr>
+                        <td><code>git reset [file]</code></td>
+                        <td>Unstage changes (remove from staging area)</td>
+                    </tr>
+                    <tr>
+                        <td><code>git checkout -- [file]</code></td>
+                        <td>Discard changes in working directory</td>
+                    </tr>
+                    <tr>
+                        <td><code>git rm [file]</code></td>
+                        <td>Remove file from working directory and staging area</td>
+                    </tr>
+                </table>
+                
                 <div class="exercise">
                     <h4>Challenge Exercise</h4>
                     <ol>
@@ -861,7 +781,10 @@ node_modules/
                     <p>A branch in Git is simply a lightweight movable pointer to a commit. The default branch name in Git is <code>main</code> (formerly <code>master</code>).</p>
                 </div>
                 
-                <img src="/api/placeholder/800/400" alt="Git Branching Visualization">
+                <div class="workflow-chart">
+                    <h4>Git Branching Visualization</h4>
+                    <p>Imagine your project as a tree with branches. The main branch (trunk) contains your stable code, while feature branches (smaller branches) allow you to work on new features without affecting the main codebase. When a feature is complete, you merge the branch back into main.</p>
+                </div>
                 
                 <h3>Basic Branching Commands</h3>
                 <table class="command-table">
@@ -949,6 +872,25 @@ $ git commit -m "Resolve merge conflict"</code></pre>
                 <h3>Creating a GitHub Account</h3>
                 <p>If you don't have a GitHub account yet, go to <a href="https://github.com">github.com</a> and sign up for free.</p>
 
+                <h3>Setting Up Authentication</h3>
+                <p>To interact with GitHub from your local machine, you'll need to set up authentication. GitHub recommends using Personal Access Tokens or SSH keys:</p>
+                
+                <h4>Using Personal Access Tokens (Recommended)</h4>
+                <ol>
+                    <li>Go to GitHub Settings → Developer settings → Personal access tokens</li>
+                    <li>Generate a new token with appropriate permissions (repo, workflow)</li>
+                    <li>Use the token as your password when prompted</li>
+                </ol>
+                
+                <h4>Using SSH Keys</h4>
+                <pre><code># Generate SSH key
+$ ssh-keygen -t ed25519 -C "your.email@example.com"
+
+# Add SSH key to ssh-agent
+$ ssh-add ~/.ssh/id_ed25519
+
+# Copy public key to GitHub (Settings → SSH and GPG keys)</code></pre>
+
                 <h3>Creating a New Repository on GitHub</h3>
                 <ol>
                     <li>Log in to your GitHub account.</li>
@@ -961,7 +903,7 @@ $ git commit -m "Resolve merge conflict"</code></pre>
                 <h3>Connecting Your Local Repository to GitHub</h3>
                 <p>To push your local repository to GitHub, you need to add a remote:</p>
                 <pre><code># Add a remote repository
-$ git remote add origin
+$ git remote add origin https://github.com/username/repository-name.git
 # Push your local repository to GitHub
 $ git push -u origin main</code></pre>
 
@@ -1006,8 +948,10 @@ $ git push -u origin main</code></pre>
                 <p>Here are some resources to help you continue learning about Git and GitHub:</p>
                 <ul>
                     <li><a href="https://git-scm.com/doc">Git Documentation</a></li>
-        
-                    </li>
+                    <li><a href="https://github.com/guides">GitHub Guides</a></li>
+                    <li><a href="https://git-scm.com/book/en/v2">Pro Git Book</a></li>
+                    <li><a href="https://learngitbranching.js.org/">Learn Git Branching</a></li>
+                    <li><a href="https://github.com/git/git">Git Source Code</a></li>
                 </ul>
 
                 <h3>Conclusion</h3>
